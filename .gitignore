@@ -1,0 +1,7 @@
+.idea
+.iml
+.py[cdo]
+__pycache__/
+log.txt
+qrc.output
+cache/

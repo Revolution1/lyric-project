@@ -1,0 +1,38 @@
+<RCC>
+  <qresource prefix="/">
+    <file>icon/text.png</file>
+    <file>icon/close.png</file>
+    <file>icon/shortcuts.png</file>
+    <file>icon/skip.png</file>
+    <file>icon/about.png</file>
+    <file>icon/cancled.png</file>
+    <file>icon/copy.png</file>
+    <file>icon/delete.png</file>
+    <file>icon/down.png</file>
+    <file>icon/download.png</file>
+    <file>icon/help.png</file>
+    <file>icon/important.png</file>
+    <file>icon/new.png</file>
+    <file>icon/next.png</file>
+    <file>icon/no.png</file>
+    <file>icon/ok.png</file>
+    <file>icon/open.png</file>
+    <file>icon/paste.png</file>
+    <file>icon/pause.png</file>
+    <file>icon/pen-edit.png</file>
+    <file>icon/play.png</file>
+    <file>icon/previous.png</file>
+    <file>icon/quit.png</file>
+    <file>icon/redo.png</file>
+    <file>icon/reload.png</file>
+    <file>icon/remove.png</file>
+    <file>icon/save.png</file>
+    <file>icon/save-as.png</file>
+    <file>icon/setting.png</file>
+    <file>icon/stop.png</file>
+    <file>icon/text-edit.png</file>
+    <file>icon/trash.png</file>
+    <file>icon/undo.png</file>
+    <file>icon/update.png</file>
+  </qresource>
+</RCC>
