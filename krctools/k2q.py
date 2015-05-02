@@ -1,6 +1,7 @@
 # coding:utf-8
 import time
 import re
+
 from krctools.kparser import KParser
 
 
@@ -100,9 +101,9 @@ def doReplaces(s):
          '[hH]avent': "haven't",
          '[iI]ts': "it's"}
     for i in d:
-        s = re.sub(r'\W?(%s)\W+|^%s$' % (i,i), d[i], s)
+        s = re.sub(r'(?=\W)(%s)(?=\W)|^(%s)(?=\W)' % (i, i), d[i], s)
     s = re.sub(r"(?=[^a-zA-Z]?)(i)(?=[^a-zA-Z]+)|^i$", 'I', s)
-    s = s.replace('\\','')
+    s = s.replace('\\', '')
     return replaceApos(s)
 
 
@@ -132,8 +133,8 @@ if __name__ == '__main__':
     # print(capitalize(tests))
     # print(tests)
     # print(k2q.standardFilter(tests.splitlines()[10:], dict(ti='Real Love', ar='The Beatles', al='Anthology 2')))
-    from krctools.decode import Decoder
-    f='../cache/98104.krc'
-    decoder = Decoder(fileName=f)
-    tests = decoder.getDecoded()
+    # from krctools.decode import Decoder
+    # f='../cache/98104.krc'
+    # decoder = Decoder(fileName=f)
+    # tests = decoder.getDecoded()
     print(k2q.convert(tests, dict(ti='Real Love', ar='The Beatles')))
