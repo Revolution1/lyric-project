@@ -3,6 +3,7 @@ import requests
 
 header = {'User-Agent': 'Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0'}
 
+TIMEOUT = 3
 
 def searchSong(songName):
     # {
@@ -24,7 +25,7 @@ def searchSong(songName):
     #http://lib9.service.kugou.com/websearch/index.php?page=1&keyword={{songName}}&cmd=100
     url = 'http://lib9.service.kugou.com/websearch/index.php'
     gets = dict(page='1', keyword=songName, cmd='100')
-    r = requests.get(url, params=gets, headers=header)
+    r = requests.get(url, params=gets, headers=header, timeout=TIMEOUT)
     r.raise_for_status()
     total=int(r.json()['data']['total'])
     if total>1:
@@ -51,7 +52,7 @@ def getSongUrl(hash):
     url = 'http://m.kugou.com/app/i/getSongInfo.php'
     gets = {'hash': hash,
             'cmd': 'playInfo'}
-    r = requests.get(url, params=gets, headers=header)
+    r = requests.get(url, params=gets, headers=header, timeout=TIMEOUT)
     r.raise_for_status()
     return r.json()['url']
 
@@ -64,7 +65,7 @@ def getkrc(filename, timelength, hash):
             'type': '1',
             'cmd': '200',
             'hash': hash}
-    r = requests.get(url, params=gets, headers=header)
+    r = requests.get(url, params=gets, headers=header, timeout=TIMEOUT)
     r.raise_for_status()
     return r.content
 
