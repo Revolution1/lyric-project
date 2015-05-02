@@ -1,6 +1,7 @@
 # coding:utf-8
 # coding:utf-8
 import re
+
 from krctools.baseparser import parser
 
 
@@ -21,7 +22,6 @@ class QParser(parser):
 
     def getLyric(self):
         """
-        :type tag : str
         :rtype: list
         """
         return self._dict.get('lyrics')
