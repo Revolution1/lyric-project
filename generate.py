@@ -128,8 +128,9 @@ def generate(params):
     logger.logPrint('Succeeded:%d   Failed:%d   Total:%d\n' % tuple(total))
     delta = datetime.now() - startTime
     logger.logPrint('It takes %s seconds to finish.' % delta.seconds)
-    logger.logToDisk()
     logger.logCsv(targetDir)
+    logger.logPrint('CSV dumped.')
+    logger.logToDisk()
 
 
 if __name__ == '__main__':
